@@ -33,6 +33,7 @@ export function useSearch() {
       id: Date.now().toString(),
       query,
       timestamp: Date.now(),
+      count: 1
     }
 
     setState(prev => {
