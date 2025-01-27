@@ -81,13 +81,12 @@ export function CommandMenu() {
           key="ai"
           onSelect={() => {
             runCommand(() => {
-              router.push(`/ai?q=${encodeURIComponent(query)}`)
               addRecentSearch(query)
             })
           }}
         >
           <MessageSquare className="mr-2 h-4 w-4" />
-          Ask AI about "{query}"
+          Ask AI about &quot;{query}&quot;
         </CommandItem>
       )
     }
@@ -98,13 +97,12 @@ export function CommandMenu() {
         key="search"
         onSelect={() => {
           runCommand(() => {
-            router.push(`/search?q=${encodeURIComponent(query)}`)
             addRecentSearch(query)
           })
         }}
       >
         <Search className="mr-2 h-4 w-4" />
-        Search for "{query}"
+        Search for &quot;{query}&quot;
       </CommandItem>
     )
     
@@ -115,13 +113,12 @@ export function CommandMenu() {
           key="ai"
           onSelect={() => {
             runCommand(() => {
-              router.push(`/ai?q=${encodeURIComponent(query)}`)
               addRecentSearch(query)
             })
           }}
         >
           <MessageSquare className="mr-2 h-4 w-4" />
-          Ask AI about "{query}"
+          Ask AI about &quot;{query}&quot;
         </CommandItem>
       )
     }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 import { CommandMenu } from "@/components/command-menu";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -33,11 +34,11 @@ export default function RootLayout({
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center">
               <div className="container flex h-14 max-w-3xl items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <a className="flex items-center space-x-2" href="/">
+                  <Link className="flex items-center space-x-2" href="/">
                     <span className="font-bold">
                       Command Search
                     </span>
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex w-full max-w-sm items-center justify-end space-x-2">
                   <CommandMenu />
