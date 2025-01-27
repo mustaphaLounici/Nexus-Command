@@ -1,101 +1,61 @@
-import Image from "next/image";
+import { Search } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-10">
+      <div className="mx-auto w-full max-w-2xl px-4">
+        <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <Search className="h-12 w-12 text-muted-foreground" />
+          </div>
+          <h1 className="mb-2 text-3xl font-bold">Command Search Demo</h1>
+          <p className="mb-8 text-lg text-muted-foreground">
+            A modern search experience with keyboard navigation and AI assistance
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="rounded-lg border bg-card p-8">
+          <h2 className="mb-4 text-lg font-semibold">Quick Start</h2>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between rounded-md bg-muted p-4">
+              <span className="text-sm">Open search</span>
+              <kbd className="pointer-events-none select-none items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium opacity-100">
+                <span className="text-xs">⌘</span>K
+              </kbd>
+            </div>
+            <div className="flex items-center justify-between rounded-md bg-muted p-4">
+              <span className="text-sm">Navigate results</span>
+              <kbd className="pointer-events-none select-none items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium opacity-100">
+                ↑↓
+              </kbd>
+            </div>
+            <div className="flex items-center justify-between rounded-md bg-muted p-4">
+              <span className="text-sm">Select result</span>
+              <kbd className="pointer-events-none select-none items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium opacity-100">
+                ↵
+              </kbd>
+            </div>
+            <div className="flex items-center justify-between rounded-md bg-muted p-4">
+              <span className="text-sm">Close search</span>
+              <kbd className="pointer-events-none select-none items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium opacity-100">
+                esc
+              </kbd>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-lg border bg-card p-8">
+          <h2 className="mb-4 text-lg font-semibold">Features</h2>
+          <ul className="list-inside list-disc space-y-2 text-muted-foreground">
+            <li>Global command menu with keyboard shortcuts</li>
+            <li>Recent searches and suggestions</li>
+            <li>Smart result ranking with affinity scores</li>
+            <li>Navigation shortcuts and file search</li>
+            <li>AI-powered assistance for longer queries</li>
+            <li>Dark mode support</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
